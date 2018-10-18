@@ -1,6 +1,10 @@
 
 import React, { Component } from 'react';
-import { View, Text, Animated } from 'react-native';
+import {
+    View,
+    Text,
+    Animated
+} from 'react-native';
 
 class Ball extends Component{
 
