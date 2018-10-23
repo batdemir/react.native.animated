@@ -39,12 +39,28 @@ export default class App extends React.Component {
     );
   }
 
+  renderNoMoreCards(){
+    return (
+      <Card title="All Done!">
+        <Text style = {{marginBottom:10}}>
+          There's no more cards !
+        </Text>
+        <Button
+          icon={{name:'code'}}
+          backgroundColor="#03A9F4"
+          title="Get More!">
+        </Button>
+      </Card>
+    );
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Deck 
           data={DATA}
           renderCard = {this.renderCard}
+          renderNoMoreCards = {this.renderNoMoreCards}
         />
       </View>
     );
@@ -55,7 +71,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop: 20
+    marginTop: 30
   },
 });
 
